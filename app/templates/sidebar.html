@@ -1,0 +1,203 @@
+<!--Sidebar-->
+<aside class="sidebar" id="sidebar">
+  <div class="sidebar__header">
+    <img
+      src="{{ url_for('static', filename='img/sidebar_bg.jpg') }}"
+      alt="background"
+    />
+  </div>
+  <div class="sidebar__content">
+    <div class="profile">
+      <img
+        class="profile__avatar"
+        src="{{ url_for('static', filename='img/avatar.png') }}"
+        alt="avatar"
+      />
+
+      <div class="profile__header">
+        <div class="profile__name">Джон Сноу</div>
+        <div class="profile__prof">блог front-end разработчика</div>
+      </div>
+
+      <ul class="social">
+        <li class="social__item">
+          <a class="social__link" href="#" target="_blank">
+            <img
+              src="{{ url_for('static', filename='img/inst.svg') }}"
+              alt="inst"
+            />
+          </a>
+        </li>
+        <li class="social__item">
+          <a class="social__link" href="#" target="_blank">
+            <img
+              src="{{ url_for('static', filename='img/vk.svg') }}"
+              alt="vk"
+            />
+          </a>
+        </li>
+        <li class="social__item">
+          <a class="social__link" href="#" target="_blank">
+            <img
+              src="{{ url_for('static', filename='img/pinterest.svg') }}"
+              alt="pint"
+            />
+          </a>
+        </li>
+      </ul>
+
+      <div class="profile__text">
+        <p>
+          Front-end разработчик. Практик верстки сайтов.Созданием сайтов
+          занимаюсь с 2012 года. Работал в нескольких ИТ компаниях и наработал
+          более 10 000 часов в создании сайтов различной сложности.
+        </p>
+      </div>
+
+      <nav class="nav nav--mobile">
+        <ul class="nav__list">
+          <li>
+            <a class="nav__link" href="index">Главная</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link has-subnav" href="#">Статьи</a>
+
+            <ul class="subnav">
+              <li>
+                <a class="subnav__link" href="text">Создание сайтов</a>
+              </li>
+              <li>
+                <a class="subnav__link" href="#">Интернет-маркетинг</a>
+              </li>
+              <li>
+                <a class="subnav__link" href="#">Продвижение видео</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a class="nav__link" href="/text">Обо мне</a>
+          </li>
+          <li>
+            <a class="nav__link" href="#">Реклама</a>
+          </li>
+          <li>
+            <a class="nav__link" href="profile">Профиль</a>
+          </li>
+          <li>
+            <a class="nav__link" href="signin">Выйти</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+  <div class="sidebar__footer">
+    <a class="btn btn--red" href="/works">Мои работы</a>
+    <button class="btn btn--blue" type="button" data-modal="contact-modal">
+      Написать мне
+    </button>
+  </div>
+</aside>
+
+<!---------------------------------------------------------------------------------------------->
+<!-- MODALS -->
+
+<!--Message-->
+
+<div class="modal" id="contact-modal">
+  <div class="modal__content modal__content--contact">
+    <button class="modal__close" type="button">
+      <img src="{{ url_for('static', filename='img/exit.svg') }}" alt="exit" />
+    </button>
+
+    <form action="/" class="form" method="post">
+      <div class="form__group form__group--md">
+        <input type="text" class="form__control" placeholder="Введите имя" />
+        <span class="form__line"></span>
+      </div>
+      <div class="form__group form__group--md">
+        <input
+          type="email"
+          class="form__control"
+          placeholder="Введите e-mail"
+        />
+        <span class="form__line"></span>
+      </div>
+      <div class="form__group form__group--md">
+        <textarea
+          class="form__control form__control--textarea"
+          name="message-text"
+          placeholder="Текст сообщения"
+          data-authoresize="authoresize"
+        ></textarea>
+        <span class="form__line"></span>
+      </div>
+
+      <div class="form__footer">
+        <div class="form__group form__group--md">
+          <button class="btn btn--blue btn--rounded btn--sm" type="submit">
+            Отправить
+          </button>
+        </div>
+      </div>
+    </form>
+
+    <ul class="modal__footer">
+      <li>e-mail: <a href="mailto:info@mywebsite.ru">info@mywebsite.ru</a></li>
+      <li>тел: <a href="tel:+94323285622">+943-232-856-22</a></li>
+    </ul>
+  </div>
+</div>
+
+<!--Modal Socials -->
+
+<div class="modal">
+  <div class="modal__content">
+    <button class="modal__close" type="button">
+      <img src="{{ url_for('static', filename='img/exit.svg') }}" alt="exit" />
+    </button>
+
+    <ul class="social">
+      <li class="social__item">
+        <a class="social__link" href="#">
+          <img src="{{ url_for('static', filename='img/fb.svg') }}" alt="fb" />
+        </a>
+      </li>
+      <li class="social__item">
+        <a class="social__link" href="#">
+          <img
+            src="{{ url_for('static', filename='img/tw.svg') }}"
+            alt="twit"
+          />
+        </a>
+      </li>
+      <li class="social__item">
+        <a class="social__link" href="#">
+          <img
+            src="{{ url_for('static', filename='img/vk 2.svg') }}"
+            alt="vk2"
+          />
+        </a>
+      </li>
+      <li class="social__item">
+        <a class="social__link" href="#">
+          <img
+            src="{{ url_for('static', filename='img/copy.svg') }}"
+            alt="copy"
+          />
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<!-- Modal Storie -->
+
+<div class="modal" id="story-modal">
+  <div class="modal__content modal__content--story">
+    <video
+      class="modal__video"
+      poster="{{ url_for('static', filename='img/poster.png') }}"
+      src=""
+    ></video>
+  </div>
+</div>

@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+
+
+{% block body %}
+
+
+    {% include 'header.html' %}
+
+    {% include 'sidebar.html' %}
+
+
+        <h1 class="page__title">Профиль</h1>
+
+
+        <form action="/" class="form" method="post">
+            <div class="cabinet">
+                <div class="cabinet__form">
+                    <div class="form__group form__group--md">
+                        <input type="text" class="form__control" placeholder="Введите имя" value="Хузина Маргарита">
+                        <span class="form__line"></span>
+                    </div>
+
+                    <div class="form__group form__group--md">
+                        <input type="email" class="form__control" placeholder="Введите e-mail" value="xuzina.margo@yandex.ru">
+                        <span class="form__line"></span>
+                    </div>
+
+                    <div class="form__group form__group--md">
+                        <input type="password" class="form__control" placeholder="Новый пароль">
+                        <span class="form__line"></span>
+                    </div>
+                    <div class="form__group form__group--md">
+                        <input type="password" class="form__control" placeholder="Подтвердите пароль">
+                        <span class="form__line"></span>
+                    </div>
+                </div>
+
+
+                <div class="cabinet__avatar">
+                    <img src="{{ url_for('static', filename='img/profile_picture.png') }}" alt="">
+
+                    <label class="cabinet__file">
+                        <input type="file">
+                        Выбрать аватар
+                    </label>
+                </div>
+
+            </div>
+
+            <div class="form__footer">
+                <button class="btn btn--blue btn--rounded btn--sm" type="submit">Сохранить</button>
+            </div>
+
+        </form>
+
+{% endblock %}

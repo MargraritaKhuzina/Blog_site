@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+
+
+{% block body %}
+
+
+    {% include 'header.html' %}
+
+    {% include 'sidebar.html' %}
+
+<article class="post">
+       <div class="post__actions">
+           <a href="/index">вернуться назад</a>
+           <a href="#">
+               поделиться
+               <img class="post__actions-icon" src="{{ url_for('static', filename='img/share.svg') }}" alt="share">
+           </a>
+       </div>
+       <div class="post__header post__header--open">
+           <h1 class="post__title post__title--mb0">Как я сходил на FrontEnd Conf 2021</h1>
+       </div>
+       <div class="post__content">
+           <div class="post__text">
+
+               <h3>Title h3</h3>
+               <p>Lorem ipsum dolor sit amet, <a href="#">consectetur adipisicing elit</a>. Consequuntur culpa ducimus voluptas voluptate! Debitis facilis, fugit. A ad aperiam asperiores cum debitis eligendi expedita fugiat hic id illum, ipsa, mollitia nobis quibusdam quos sint vitae, voluptate. Adipisci eligendi porro quae.</p>
+               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur culpa ducimus voluptas voluptate! Debitis facilis, fugit. A ad aperiam asperiores cum debitis eligendi expedita fugiat hic id illum, ipsa, mollitia nobis quibusdam quos sint vitae, voluptate. Adipisci eligendi porro quae.</p>
+
+               <h2>Title h2</h2>
+               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut cumque distinctio laborum magni molestiae quasi ut veniam veritatis. Accusantium amet aperiam corporis delectus dolor dolores error, laboriosam libero magnam maiores nam perspiciatis quas quo quod rerum vitae, voluptatem voluptatibus? A debitis est inventore iste minus nulla perferendis quis ullam voluptas.</p>
+
+               <p>
+                   <img src="{{ url_for('static', filename='img/post_img.jpg') }}" alt="">
+               </p>
+               <p>
+                   <span class="fr-video">
+                       <iframe width="560" height="315" src="https://www.youtube.com/embed/jfKfPfyJRdk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                   </span>
+               </p>
+
+           </div>
+
+         </div>
+
+   </article>
+
+{% endblock %}

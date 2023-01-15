@@ -1,0 +1,77 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Works
+{% endblock %}
+
+
+{% block body %}
+
+
+    {% include 'header.html' %}
+
+    {% include 'sidebar.html' %}
+
+
+<h1 class="page__title">Мои работы</h1>
+
+<article class="work">
+    <div class="work__preview">
+        <picture>
+            <source srcset="https://place-hold.it/576x150" media="(max-width: 576px)">
+            <img src="{{ url_for('static', filename='img/work1.jpg') }}" alt="work1 ">
+        </picture>
+    </div>
+
+    <div class="work__content">
+        <h2 class="work__title">
+            <a href="#" target="_blank">altermono.com</a>
+        </h2>
+        <div class="work__description">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elementum volutpat orci turpis urna. Et vestibulum, posuere tortor lacinia sit. Sagittis porttitor orci auctor in at tincidunt arcu egestas. Fusce arcu sodales lacinia eu auctor nunc nam id. Diam sit sed volutpat massa. Egestas ornare vel volutpat.</p>
+        </div>
+        <ul class="tags">
+            <li class="tags__item">дизайн</li>
+            <li class="tags__item">создание сайтов</li>
+            <li class="tags__item">SMM</li>
+        </ul>
+
+        <div class="work__footer">
+            <a class="btn btn--blue btn--rounded btn--sm" href="#" target="_blank">Перейти на сайт</a>
+        </div>
+    </div>
+</article>
+
+<article class="work">
+    <div class="work__preview">
+        <picture>
+            <source srcset="https://place-hold.it/576x150" media="(max-width: 576px)">
+            <img src="{{ url_for('static', filename='img/work2.jpg') }}" alt="work1 ">
+        </picture>
+    </div>
+
+    <div class="work__content">
+        <h2 class="work__title">
+            <a href="#" target="_blank">altermono.com</a>
+        </h2>
+        <div class="work__description">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sagittis porttitor orci auctor in at tincidunt arcu egestas. Fusce arcu sodales lacinia eu auctor nunc nam id. Diam sit sed volutpat massa. Egestas ornare vel volutpat.</p>
+        </div>
+        <ul class="tags">
+            <li class="tags__item">дизайн</li>
+            <li class="tags__item">создание сайтов</li>
+            <li class="tags__item">SMM</li>
+        </ul>
+
+        <div class="work__footer">
+            <a class="btn btn--blue btn--rounded btn--sm" href="#" target="_blank">Перейти на сайт</a>
+        </div>
+    </div>
+</article>
+
+
+
+
+
+
+{% endblock %}

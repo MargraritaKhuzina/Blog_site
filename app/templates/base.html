@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='reset.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %} Название {% endblock %}</title>
+</head>
+
+<body>
+
+<div class="page" id="page">
+    <main class="main">
+        <div class="container">
+{% block body %}
+
+
+{% endblock %}
+        </div>
+    </main>
+</div>
+
+<!--Js-->
+
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+<script src = "{{ url_for('static', filename = 'app.js') }}"></script>
+
+</body>
+</html>

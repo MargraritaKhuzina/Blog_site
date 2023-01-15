@@ -1,0 +1,179 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+
+{% block body %}
+
+
+    {% include 'header.html' %}
+
+    {% include 'sidebar.html' %}
+
+
+<!--   Stories         -->
+            <div class="stories">
+                <div class="stories__item" data-modal="story-modal">
+                    <img class="stories__photo" src="{{ url_for('static', filename='img/st1.jpg') }}" alt="st1">
+                    <div class="stories__title">Отдыхаю на природе</div>
+                    <time class="stories__date" datetime="2020-09-21">21.09.2020</time>
+                </div>
+                <div class="stories__item" data-modal="story-modal">
+                    <img class="stories__photo" src="{{ url_for('static', filename='img/st2.jpg') }}" alt="st1">
+                    <div class="stories__title">Заканчиваю сложный проект</div>
+                    <time class="stories__date" datetime="2020-09-21">15.09.2020</time>
+                </div>
+                <div class="stories__item" data-modal="story-modal">
+                    <img class="stories__photo" src="{{ url_for('static', filename='img/st3.jpg') }}" alt="st1">
+                    <div class="stories__title">Переехал в новую квартиру</div>
+                    <time class="stories__date" datetime="2020-09-21">11.09.2020</time>
+                </div>
+                <div class="stories__item" data-modal="story-modal">
+                    <img class="stories__photo" src="{{ url_for('static', filename='img/st4.jpg') }}" alt="st1">
+                    <div class="stories__title">Осень пришла!</div>
+                    <time class="stories__date" datetime="2020-09-21">28.08.2020</time>
+                </div>
+            </div>
+
+<!-- Post -->
+
+            <div class="add-post">
+                <form class="add-post__form" action="/" method="post">
+                    <textarea class="add-post__textarea" name="post-text" placeholder="Напишите что-нибудь" data-authoresize="authoresize"></textarea>
+
+                    <div class="add-post__form-actions">
+                        <label class="add-post__file" for="add-post-file">
+                            <input type="file" id="add-post-file">
+                        </label>
+                        <button class="add-post__send" type="submit">
+                            Отправить
+                        </button>
+                    </div>
+                </form>
+            </div>
+
+
+<!-- Article -->
+
+<!--            Post 1-->
+            <div class="post">
+                <div class="post__content">
+                    <p class="post__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur consequuntur cum debitis dignissimos dolorem eligendi expedita fuga, incidunt, iusto laudantium libero magnam nemo nesciunt nisi nostrum odio quia repudiandae tempora.</p>
+                </div>
+                <div class="post__footer">
+                    <ul class="post__data">
+                        <li class="post__data-item">
+                            <time datetime="2020-06-21">21.06.2020</time>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+<!--            Post 2 -->
+            <article class="post">
+                <div class="post__header post__header--preview">
+                    <a href="http://127.0.0.1:5000/post">
+                        <img class="post__image" src="{{ url_for('static', filename='img/post_1.jpg') }}" alt="Как писать код быстро и безболезненно?">
+                    </a>
+                </div>
+                <div class="post__content">
+                    <h2 class="post__title">
+                        <a href="http://127.0.0.1:5000/post">Как писать код быстро и безболезненно?</a>
+                    </h2>
+                    <p class="post__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur consequuntur cum debitis dignissimos dolorem eligendi expedita fuga, incidunt, iusto laudantium libero magnam nemo nesciunt nisi nostrum odio quia repudiandae tempora.</p>
+                </div>
+                <div class="post__footer">
+                    <ul class="post__data">
+                        <li class="post__data-item">
+                            <time datetime="2020-06-21">21.06.2020</time>
+                        </li>
+                        <li class="post__data-item">
+                            <a href="/post">создание сайтов</a>
+                        </li>
+                    </ul>
+
+                    <a class="post__read" href="/post">читать</a>
+                </div>
+            </article>
+
+<!-- Post 3 -->
+
+            <article class="post">
+                <div class="post__header">
+                    <div class="embed">
+                        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="post__content">
+                    <h2 class="post__title">
+                        <a href="#">Купил новый ноутбук за 150 000 руб</a>
+                    </h2>
+                </div>
+                <div class="post__footer">
+                    <ul class="post__data">
+                        <li class="post__data-item">
+                            <time datetime="2020-06-21">21.06.2020</time>
+                        </li>
+                        <li class="post__data-item">
+                            <a href="#">продвижение видео</a>
+                        </li>
+                    </ul>
+                    <a class="post__read" href="#">оставить комментарий</a>
+                </div>
+            </article>
+
+<!-- Post 4-->
+
+           <article class="post">
+                <div class="post__header post__header--preview">
+                    <a href="/text">
+                        <img class="post__image" src="{{ url_for('static', filename='img/post4.jpg') }}" alt="Как писать код быстро и безболезненно?">
+                    </a>
+                </div>
+                <div class="post__content">
+                    <h2 class="post__title">
+                        <a href="http://127.0.0.1:5000/post">Как я сходил на FrontEnd Conf 2021</a>
+                    </h2>
+                    <p class="post__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur consequuntur cum debitis dignissimos dolorem eligendi expedita fuga, incidunt, iusto laudantium libero magnam nemo nesciunt nisi nostrum odio quia repudiandae tempora.</p>
+                </div>
+                <div class="post__footer">
+                    <ul class="post__data">
+                        <li class="post__data-item">
+                            <time datetime="2020-06-21">21.06.2020</time>
+                        </li>
+                        <li class="post__data-item">
+                            <a href="#">создание сайтов</a>
+                        </li>
+                    </ul>
+
+                    <a class="post__read" href="/text">читать</a>
+                </div>
+            </article>
+
+<!--    Nav        -->
+
+            <ul class="pagination">
+                <li class="pagination__item">
+                    <a class="pagination__link" href="#">&lt;</a>
+                </li>
+                <li class="pagination__item">
+                    <a class="pagination__link" href="#">1</a>
+                </li>
+                <li class="pagination__item">
+                    <a class="pagination__link active" href="#">2</a>
+                </li>
+                <li class="pagination__item">
+                    <a class="pagination__link" href="#">3</a>
+                </li>
+                <li class="pagination__item">
+                    <a class="pagination__link" href="#">&gt;</a>
+                </li>
+            </ul>
+
+
+
+
+
+{% endblock %}

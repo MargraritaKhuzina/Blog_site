@@ -1,0 +1,162 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Post
+{% endblock %}
+
+
+{% block body %}
+
+
+    {% include 'header.html' %}
+
+    {% include 'sidebar.html' %}
+
+   <article class="post">
+       <div class="post__actions">
+           <a href="/index">вернуться назад</a>
+           <a href="#">
+               поделиться
+               <img class="post__actions-icon" src="{{ url_for('static', filename='img/share.svg') }}" alt="share">
+           </a>
+       </div>
+       <div class="post__header post__header--open">
+           <h1 class="post__title post__title--open">Как я сходил на FrontEnd Conf 2021</h1>
+           <ul class="post__data">
+               <li class="post__data-item">
+                   <time datetime="2020-06-21">21.06.2020</time>
+               </li>
+               <li class="post__data-item">
+                   <a href="#">создание сайтов</a>
+               </li>
+           </ul>
+       </div>
+       <div class="post__content">
+           <div class="post__text">
+
+               <h3>Title h3</h3>
+               <p>Lorem ipsum dolor sit amet, <a href="#">consectetur adipisicing elit</a>. Consequuntur culpa ducimus voluptas voluptate! Debitis facilis, fugit. A ad aperiam asperiores cum debitis eligendi expedita fugiat hic id illum, ipsa, mollitia nobis quibusdam quos sint vitae, voluptate. Adipisci eligendi porro quae.</p>
+               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur culpa ducimus voluptas voluptate! Debitis facilis, fugit. A ad aperiam asperiores cum debitis eligendi expedita fugiat hic id illum, ipsa, mollitia nobis quibusdam quos sint vitae, voluptate. Adipisci eligendi porro quae.</p>
+
+               <h2>Title h2</h2>
+               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut cumque distinctio laborum magni molestiae quasi ut veniam veritatis. Accusantium amet aperiam corporis delectus dolor dolores error, laboriosam libero magnam maiores nam perspiciatis quas quo quod rerum vitae, voluptatem voluptatibus? A debitis est inventore iste minus nulla perferendis quis ullam voluptas.</p>
+
+               <p>
+                   <img src="{{ url_for('static', filename='img/post_img.jpg') }}" alt="">
+               </p>
+               <ul>
+                   <li>item</li>
+                   <li>item</li>
+                   <li>item</li>
+                   <li>item</li>
+               </ul>
+
+               <ol>
+                   <li>item</li>
+                   <li>item</li>
+                   <li>item</li>
+               </ol>
+
+               <table>
+                   <tr>
+                       <td>1</td>
+                       <td>2</td>
+                       <td>3</td>
+                   </tr>
+               </table>
+
+               <p>
+                   <span class="fr-video">
+                       <iframe width="560" height="315" src="https://www.youtube.com/embed/jfKfPfyJRdk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                   </span>
+               </p>
+
+           </div>
+
+           <div class="related">
+               <h3 class="post__subtitle">Интересно почитать</h3>
+               
+               <ul class="related__list">
+                   <li class="related__list-item">
+                       <h4 class="related__list-title">
+                           <a href="#">Как я сходил на FrontEnd Conf 2021</a>
+                       </h4>
+                       <time class="related__list-date" datetime="2020-06-21">21.06.2020</time>
+                   </li>
+                    <li class="related__list-item">
+                       <h4 class="related__list-title">
+                           <a href="#">Как писать код быстро и безболезненно</a>
+                       </h4>
+                       <time class="related__list-date" datetime="2020-06-21">21.06.2020</time>
+                   </li>
+                    <li class="related__list-item">
+                       <h4 class="related__list-title">
+                           <a href="#">Купил новый ноутбук за 150 000 руб</a>
+                       </h4>
+                       <time class="related__list-date" datetime="2020-06-21">21.06.2020</time>
+                   </li>
+                    <li class="related__list-item">
+                       <h4 class="related__list-title">
+                           <a href="#">Как я сходил на FrontEnd Conf 2021 Как я сходил на FrontEnd Conf 2021</a>
+                       </h4>
+                       <time class="related__list-date" datetime="2020-06-21">21.06.2020</time>
+                   </li>
+               </ul>
+           </div>
+
+               <h3 class="post__subtitle">Обсуждение</h3>
+               <form class="form" action="/" method="post">
+                   <div class="form__group">
+                        <textarea class="form__control form__control--textarea" name="comments-text" placeholder="Текст комментария" data-authoresize="authoresize"></textarea>
+                        <span class="form__line"></span>
+                   </div>
+                   <button class="btn btn--blue btn--rounded btn--sm" type="submit">Отправить</button>
+               </form>
+
+
+            <ul class="comments">
+               <li class="comments__item">
+                   <div class="comments__header">
+                       <img class="comments__avatar" src="{{ url_for('static', filename='img/comment1.png') }}" alt="">
+
+                       <div class="comments__author">
+                           <div class="comments__name">Дмитрий Валак</div>
+                           <time class="comments__date" datetime="2020-06-21 07:06">1 неделю назад</time>
+                       </div>
+
+                   </div>
+
+                   <div class="comments__text">
+                       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto consequatur eius explicabo id iste iusto obcaecati pariatur praesentium ullam voluptate!
+                   </div>
+                   <button class="comments__reply" type="button">ответить</button>
+
+                        <ul class="comments">
+                           <li class="comments__item">
+                               <div class="comments__header">
+                                   <img class="comments__avatar" src="{{ url_for('static', filename='img/comment2.png') }}" alt="">
+
+                                   <div class="comments__author">
+                                       <div class="comments__name">Джон Сноу</div>
+                                       <time class="comments__date" datetime="2020-06-21 07:06">3 недели назад</time>
+                                   </div>
+
+                               </div>
+
+                               <div class="comments__text">
+                                    Я ничего не знаю
+                               </div>
+                               <button class="comments__reply" type="button">ответить</button>
+                           </li>
+                        </ul>
+               </li>
+            </ul>
+
+
+       </div>
+
+   </article>
+
+
+
+{% endblock %}
